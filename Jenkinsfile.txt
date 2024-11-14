@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sshagent(['ubuntu']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@54.84.241.184 <<EOF
+                    ssh -o StrictHostKeyChecking=no ubuntu@54.91.94.103 <<EOF
 if [ ! -d "repo" ]; then
     git clone https://github.com/Aalim22/IC9 repo
 else
@@ -24,7 +24,7 @@ EOF
             steps {
                 sshagent(['ubuntu']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@54.84.241.184<<EOF
+                    ssh -o StrictHostKeyChecking=no ubuntu@54.91.94.103 <<EOF
 sudo apt update
 sudo apt install -y python3-flask
 sudo apt install -y python3-flask-cors
@@ -38,7 +38,7 @@ EOF
             steps {
                 sshagent(['ubuntu']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@54.84.241.184 <<EOF
+                    ssh -o StrictHostKeyChecking=no ubuntu@54.91.94.103 <<EOF
 cd repo
 
 # Stop any running Flask app instance
